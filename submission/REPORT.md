@@ -4,7 +4,7 @@
 
 - Tên nhóm: Nguyễn Minh Dương - bài cá nhân
 - Repository URL: https://github.com/Monmon39/K4-DAY13-2A202601206-NguyenMinhDuong
-- Commit SHA cuối: `b0bb465`
+- Commit SHA cuối: `c11fb5e`
 - Thành viên và vai trò:
   - Nguyễn Minh Dương: Logging & PII, tracing/prompt metadata, dashboard/SLO/alerts, incident investigation, report & evidence
 
