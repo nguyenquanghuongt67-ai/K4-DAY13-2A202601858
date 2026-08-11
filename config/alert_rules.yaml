@@ -1,19 +1,19 @@
 alerts:
-  - name: TODO_alert_1
-    severity: TODO
-    condition: TODO
+  - name: ai_api_latency_breach
+    severity: warning
+    condition: "latency_p95_ms > 3000 for 10m"
     type: symptom-based
-    owner: TODO
+    owner: platform-oncall
     runbook: docs/alerts.md#alert-1
-  - name: TODO_alert_2
-    severity: TODO
-    condition: TODO
+  - name: ai_api_error_rate_breach
+    severity: critical
+    condition: "error_rate_pct > 2 for 5m"
     type: symptom-based
-    owner: TODO
+    owner: platform-oncall
     runbook: docs/alerts.md#alert-2
-  - name: TODO_alert_3
-    severity: TODO
-    condition: TODO
+  - name: ai_api_quality_or_cost_breach
+    severity: warning
+    condition: "quality_score_avg < 0.75 or daily_cost_usd > 2.5"
     type: symptom-based
-    owner: TODO
+    owner: ai-platform
     runbook: docs/alerts.md#alert-3
