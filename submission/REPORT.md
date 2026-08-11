@@ -7,6 +7,7 @@
 - Commit SHA cuối: điền sau khi commit
 - Thành viên và vai trò:
   + Nguyễn Quang Hướng: Logging & Middleware
+  + Nguyễn Minh Dương: Security & Compliance
 
 ## 2. Kết quả kỹ thuật
 
@@ -54,6 +55,6 @@ Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
 |---|---|---|---|
 | Nguyễn Quang Hướng | **(Logging & Middleware):** Phụ trách CP1 (Middleware, Correlation ID, gán log metadata). | ae865c40845d14665b20d8cdcc51ae2f4b06424f | Hiểu cách luân chuyển request ID và làm giàu metadata trong hệ thống. | 
-| Nguyễn Minh Dương | **(Security & Compliance):** Phụ trách CP1 (Uncomment processor, cấu hình regex patterns che PII toàn cục). | *(Chung nhánh Huy)* | Biết cách thiết lập bộ lọc sanitize tránh rò rỉ dữ liệu nhạy cảm (email, phone, thẻ). |
+| Nguyễn Minh Dương | **(Security & Compliance):** Phụ trách CP1 (Uncomment processor, cấu hình regex patterns che PII toàn cục). | 3ccdc96a22bf8ebea3a3e1a54f38525fafbfea88 | Biết cách thiết lập bộ lọc sanitize tránh rò rỉ dữ liệu nhạy cảm (email, phone, thẻ). |
 | Đinh Xuân Hiệp | **(Metrics & Alerting):** Phụ trách CP2 (Tích hợp Langfuse, đo error_rate_pct, SLO, Alert rules, Runbook). | *(Chung nhánh Huy)* | Nắm được nguyên lý SDK Langfuse gửi trace và cách thiết lập cảnh báo chuẩn xác. |
 | Võ Quốc Huy | **(QA & Incident Analyst):** Chạy load test, thiết kế Dashboard, điều tra Challenge (CP3) & báo cáo. | *(Chung nhánh Huy)* | Nắm trọn vẹn workflow phân tích sự cố: từ Dashboard (Metrics) -> Langfuse (Traces) -> Logs. |
