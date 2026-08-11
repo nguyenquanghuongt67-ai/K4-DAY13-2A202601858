@@ -19,6 +19,10 @@ class AgentResult:
     tokens_out: int
     cost_usd: float
     quality_score: float
+    prompt_name: str
+    prompt_label: str
+    prompt_version: str
+    prompt_source: str
 
 
 class LabAgent:
@@ -88,6 +92,10 @@ class LabAgent:
             tokens_out=response.usage.output_tokens,
             cost_usd=cost_usd,
             quality_score=quality_score,
+            prompt_name=prompt.name,
+            prompt_label=prompt.label,
+            prompt_version=prompt.version,
+            prompt_source=prompt.source,
         )
 
     def _estimate_cost(self, tokens_in: int, tokens_out: int) -> float:
