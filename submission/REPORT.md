@@ -8,6 +8,7 @@
 - Thành viên và vai trò:
   + Nguyễn Quang Hướng: Logging & Middleware
   + Nguyễn Minh Dương: Security & Compliance
+  + Võ Quốc Huy :QA & Incident Analyst
 
 ## 2. Kết quả kỹ thuật
 
