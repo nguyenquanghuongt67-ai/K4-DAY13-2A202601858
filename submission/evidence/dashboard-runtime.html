@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 13 AI Observability Dashboard</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #18202f;
+    }
+    body {
+      margin: 0;
+      padding: 28px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      border-bottom: 1px solid #dbe2ef;
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 8px;
+      letter-spacing: 0;
+    }
+    .subtle {
+      color: #596579;
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #dbe2ef;
+      border-radius: 8px;
+      padding: 18px;
+      min-height: 156px;
+      box-shadow: 0 1px 2px rgba(24, 32, 47, 0.05);
+    }
+    .card h2 {
+      font-size: 15px;
+      margin: 0 0 14px;
+      color: #273248;
+    }
+    .metric {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 4px 0;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #edf1f7;
+      padding-top: 10px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+    .ok {
+      color: #0f7a4f;
+      font-weight: 700;
+    }
+    .warn {
+      color: #a45708;
+      font-weight: 700;
+    }
+    @media (max-width: 850px) {
+      body { padding: 16px; }
+      header { align-items: flex-start; flex-direction: column; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Day 13 AI Observability Dashboard</h1>
+      <div class="subtle">Source: data/logs.jsonl | Time range: last 60 minutes | Refresh: 30s</div>
+    </div>
+    <div class="subtle">Panels: latency, traffic, errors, cost, tokens, quality</div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Latency percentiles</h2>
+      <div class="metric">2651 ms</div>
+      <div class="subtle">p95 threshold <= 3000 ms</div>
+      <div class="row"><span>p50</span><strong>150 ms</strong></div>
+      <div class="row"><span>p99</span><strong>3494 ms</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Request traffic</h2>
+      <div class="metric">95</div>
+      <div class="subtle">requests in source log</div>
+      <div class="row"><span>Threshold</span><strong class="ok">>= 1 request/min</strong></div>
+      <div class="row"><span>Responses</span><strong>95</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Error rate and breakdown</h2>
+      <div class="metric">0.00%</div>
+      <div class="subtle">threshold <= 2%</div>
+      <div class="row"><span>Errors</span><strong>0</strong></div>
+      <div class="row"><span>Breakdown</span><strong>No request_failed events</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Cost over time</h2>
+      <div class="metric">$0.1988</div>
+      <div class="subtle">total threshold <= $2.50</div>
+      <div class="row"><span>Avg/request</span><strong>$0.0021</strong></div>
+      <div class="row"><span>Unit</span><strong>USD</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Input and output tokens</h2>
+      <div class="metric">16143</div>
+      <div class="subtle">threshold <= 50000 tokens</div>
+      <div class="row"><span>Input</span><strong>3616</strong></div>
+      <div class="row"><span>Output</span><strong>12527</strong></div>
+    </section>
+
+    <section class="card">
+      <h2>Quality proxy</h2>
+      <div class="metric">0.878</div>
+      <div class="subtle">mean threshold >= 0.75</div>
+      <div class="row"><span>Unit</span><strong>score 0-1</strong></div>
+      <div class="row"><span>Status</span><strong class="ok">Meets SLO</strong></div>
+    </section>
+  </main>
+</body>
+</html>
