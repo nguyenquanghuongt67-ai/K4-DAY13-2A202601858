@@ -4,7 +4,7 @@
 
 - Tên nhóm: K4-Day13-2A202601858
 - Repository URL: https://github.com/nguyenquanghuongt67-ai/K4-DAY13-2A202601858.git
-- Commit SHA cuối: điền sau khi commit
+- Commit SHA cuối: c3562215eeaebe1edcb273913d2d120f271076e4
 - Thành viên và vai trò:
   + Nguyễn Quang Hướng: Logging & Middleware
   + Nguyễn Minh Dương: Security & Compliance
